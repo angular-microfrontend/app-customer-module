@@ -1,10 +1,9 @@
-import { Component, ViewEncapsulation } from "@angular/core";
+import { Component } from "@angular/core";
 
 @Component({
   selector: "halodoc-root",
   templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.scss"],
-  encapsulation: ViewEncapsulation.Native
+  styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {
   title = "customer-module";

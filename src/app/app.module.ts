@@ -1,8 +1,8 @@
 import { BrowserModule } from "@angular/platform-browser";
-import { NgModule, Injector } from "@angular/core";
+import { NgModule, Injector, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import { APP_BASE_HREF } from "@angular/common";
-import { FormsModule } from "@angular/forms";
 import { createCustomElement } from "@angular/elements";
+import { FormsModule } from "@angular/forms";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -27,14 +27,15 @@ import { CoreModule } from "./core/core.module";
     CoreModule
   ],
   providers: [{ provide: APP_BASE_HREF, useValue: "/" }],
-  entryComponents: [CustomersComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {
   constructor(private injector: Injector) {}
   ngDoBootstrap() {
-    const el = createCustomElement(CustomersComponent, {
+    const el = createCustomElement(AppComponent, {
       injector: this.injector
     });
-    customElements.define("analytics-counter", el);
+    customElements.define("halodoc-root", el);
   }
 }
