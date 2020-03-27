@@ -1,6 +1,7 @@
 {
   "name": "customer-module",
   "version": "0.0.0",
+  "main": "./elements/customer-module.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
