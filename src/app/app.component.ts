@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 
 @Component({
-  selector: "halodoc-root",
+  selector: "halodoc-customer-module",
   templateUrl: "./app.component.html",
   styleUrls: ["./app.component.scss"]
 })

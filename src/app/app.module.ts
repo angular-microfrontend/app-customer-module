@@ -36,6 +36,6 @@ export class AppModule {
     const el = createCustomElement(AppComponent, {
       injector: this.injector
     });
-    customElements.define("halodoc-root", el);
+    customElements.define("halodoc-customer-module", el);
   }
 }
