@@ -26,7 +26,7 @@ import { CoreModule } from "./core/core.module";
     SharedModule,
     CoreModule
   ],
-  providers: [{ provide: APP_BASE_HREF, useValue: "/" }],
+  providers: [{ provide: APP_BASE_HREF, useValue: "/customers" }],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
