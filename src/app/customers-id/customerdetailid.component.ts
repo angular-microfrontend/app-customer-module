@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'halodoc-customerdetailid',
-  templateUrl: './customerdetailid.component.html',
-  styleUrls: ['./customerdetailid.component.scss']
+  selector: "halodoc-customerdetailid",
+  templateUrl: "./customerdetailid.component.html",
+  styleUrls: ["./customerdetailid.component.scss"]
 })
 export class CustomerdetailidComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

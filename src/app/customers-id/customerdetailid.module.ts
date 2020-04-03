@@ -5,6 +5,7 @@ import { CustomerDetailIdRoutingModule } from "./customerdetailid-routing.module
 
 @NgModule({
   declarations: [CustomerdetailidComponent],
-  imports: [CommonModule, CustomerDetailIdRoutingModule]
+  imports: [CommonModule, CustomerDetailIdRoutingModule],
+  entryComponents: [CustomerdetailidComponent]
 })
 export class CustomerdetailidModule {}

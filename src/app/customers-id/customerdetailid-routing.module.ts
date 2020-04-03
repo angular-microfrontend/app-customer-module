@@ -5,8 +5,22 @@ import { CustomerdetailidComponent } from "./customerdetailid.component";
 const routes: Routes = [
   {
     path: "",
-    pathMatch: "full",
-    component: CustomerdetailidComponent
+    component: CustomerdetailidComponent,
+    children: [
+      {
+        path: "user",
+        loadChildren: () => import("./user/user.module").then(m => m.UserModule)
+      },
+      {
+        path: "admin",
+        loadChildren: () =>
+          import("./admin/admin.module").then(m => m.AdminModule)
+      },
+      {
+        path: "",
+        redirectTo: "user"
+      }
+    ]
   }
 ];
 
