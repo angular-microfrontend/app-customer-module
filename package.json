@@ -5,11 +5,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build": "ng build --namedChunks=true --outputHashing=none --sourceMap=false",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:elements": "ng build --prod --output-hashing none && node concatenate.js"
+    "build:elements": "node concatenate.js"
   },
   "private": true,
   "dependencies": {
