@@ -6,26 +6,26 @@ const routes: Routes = [
   {
     path: "",
     pathMatch: "full",
-    component: CustomersComponent
+    component: CustomersComponent,
   },
   {
     path: "details",
     loadChildren: () =>
       import("./customers-detail/customer-detail.module").then(
-        m => m.CustomerDetailModule
-      )
+        (m) => m.CustomerDetailModule
+      ),
   },
   {
     path: "id/:id",
     loadChildren: () =>
       import("./customers-id/customerdetailid.module").then(
-        m => m.CustomerdetailidModule
-      )
-  }
+        (m) => m.CustomerdetailidModule
+      ),
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}

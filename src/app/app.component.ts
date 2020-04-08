@@ -33,11 +33,5 @@ export class AppComponent implements OnInit, OnChanges {
   updateLanguageTranslation(lang: string) {
     this.currentLang = lang;
     this.translate.use(this.currentLang);
-    // this.dataUpdated.emit({ translationId: lang });
-  }
-
-  ngDoCheck() {
-    if (this._data && this._data.common)
-      this.updateLanguageTranslation(this._data.common.translation);
   }
 }

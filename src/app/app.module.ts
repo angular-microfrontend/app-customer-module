@@ -57,12 +57,12 @@ export function HttpLoaderFactory(http: HttpClient) {
 export class AppModule {
   customElement;
   constructor(private injector: Injector) {
-    // if (!customElements.get("halodoc-customer-module")) {
-    this.customElement = createCustomElement(AppComponent, { injector });
-    customElements.define("halodoc-customer-module", this.customElement);
-    // } else {
-    //   console.warn(`${name} has been defined twice`);
-    // }
+    if (!customElements.get("halodoc-customer-module")) {
+      this.customElement = createCustomElement(AppComponent, { injector });
+      customElements.define("halodoc-customer-module", this.customElement);
+    } else {
+      console.warn(`${name} has been defined twice`);
+    }
   }
   ngDoBootstrap() {}
 }
